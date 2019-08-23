@@ -1,5 +1,6 @@
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
+var yt_api_url = "https://www.youtube.com/player_api";
+tag.src = yt_api_url;
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
