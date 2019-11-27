@@ -65,37 +65,26 @@ h1:hover{
     transition: all .3s ease-in-out;
 }
 
-#muteVideo:hover{
+#muteVideo:hover {
     cursor: pointer;
     transform: translateY(-4px);
 }
 
 #muteVideo svg{
     filter: drop-shadow(2px 2px 2px #CE5937);
+    height: 3rem;
+    width: auto;
 }
 
 
 @media (max-width: 992px) {
     h1{
-        font-size:5em;
+        font-size:7rem;
     }
-}
 
-@media (max-width: 672px) {
-    h1{
-        font-size:4em;
-    }
-}
-
-@media (max-width: 524px) {
-    h1{
-        font-size:3em;
-    }
-}
-
-@media (max-width: 400px) {
-    h1{
-        font-size:2em;
+    #muteVideo svg{
+        height: 7rem;
+        width: auto;
     }
 }
 

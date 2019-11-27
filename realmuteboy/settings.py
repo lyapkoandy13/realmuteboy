@@ -26,8 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5_^k5nnzodh_8y-k0xz(i-vdv=qkiy4e-z&hm6cppj&@aftns('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -86,6 +85,8 @@ WSGI_APPLICATION = 'realmuteboy.wsgi.application'
 
 # [START db_setup]
 if os.getenv('GAE_APPLICATION', None):
+    DEBUG = False
+
     # Running on production App Engine, so connect to Google Cloud SQL using
     # the unix socket at /cloudsql/<your-cloudsql-connection string>
     DATABASES = {
@@ -106,12 +107,8 @@ else:
     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'HOST': '127.0.0.1',
-            'PORT': '3306',
-            'NAME': 'realmuteboy',
-            'USER': 'realmuteboyuser',
-            'PASSWORD': 'Iskompas4!',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 # [END db_setup]
