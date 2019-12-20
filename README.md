@@ -3,8 +3,6 @@
 
 Realmuteboy landing page
 
-# Simple Django app
+Simple Django app for deployment on GCloud specificaly
 
-This repository is for deployment on GCloud specificaly
-
-link on GCloud: https://decisive-apogee-250410.appspot.com/
+demo on GCloud: https://decisive-apogee-250410.appspot.com/
